@@ -70,6 +70,7 @@ import ACPToolKit from '@/libs/ACPToolKit';
 export default {
   mounted() {
     ACPToolKit.updatePid();
+    const vm = this;
 
     $('#post-expt-form').submit(function goToNextStep(event) {
       event.preventDefault();
@@ -77,7 +78,7 @@ export default {
       // Do your own form validation here.
       ACPToolKit.downloadFormData(formResponses, 'post');
       ACPToolKit.clearAllData();
-      alert('Thank you for your participation!');
+      vm.$router.push('end');
     });
   },
 };
