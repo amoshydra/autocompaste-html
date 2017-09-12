@@ -1,10 +1,5 @@
 body {
   font-family: "Open Sans", sans-serif;
-  margin-bottom: 40px;
-}
-
-body.experiment-page {
-  margin-bottom: 0;
 }
 
 .pid {
